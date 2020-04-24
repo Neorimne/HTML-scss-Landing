@@ -1,0 +1,112 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    &__header{
+        padding: 30px 0;
+        text-align: center;
+        width: 45%;
+        h3{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 12px;
+            padding-top: 10px;
+        }
+    }
+    &__form {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    span {
+        color: red;
+    }
+}
+.form{
+    display: flex;
+    width: 60vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__wrapper{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 50px 0;
+        label{
+            margin-bottom: 30px;
+        }
+    }
+    &__name {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 49%;
+    }
+    &__email {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 49%;
+    }
+    &__message {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        label {
+            margin-bottom: 30px;
+        }
+        textarea{
+            resize: none;
+            padding: 0px 0px 0px 0px;
+        }
+    }
+    textarea:focus, 
+    input[type=text]:focus,
+    input[type=email]:focus{
+        border: none;
+        border-bottom: 1px solid grey;
+        font-size: 18px;
+        padding: 5px 0;
+    }
+    textarea, 
+    input[type=text],
+    input[type=email]{
+        border: none;
+        border-bottom: 1px solid grey;
+        font-size: 18px;
+        padding: 5px 0;
+    }
+    input[type=submit]{
+        border: none;
+        background-color: $orange-color;
+        padding: 20px 40px;
+        color: white;
+        margin: 50px 0;
+    }
+}
+@media screen and (max-width: $tablet-width) {
+    .contact{
+        &__header {
+            h3{
+                font-size: 25px;
+            }
+            p {
+                font-size: 8px;
+            }
+        }
+    }
+    .form {
+        &__wrapper {
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        div {
+            margin: 20px 0;
+        }
+    }
+}

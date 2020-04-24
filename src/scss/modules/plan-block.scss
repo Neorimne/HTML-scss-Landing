@@ -1,0 +1,71 @@
+.plan {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: $plan-block-color;
+    color: $grey-color;
+    align-items: center;
+    &__header{
+        margin: 30px 0;
+        h3{
+            font-size: 30px;
+        }
+    }
+    &__offers {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}
+.offer{
+    flex-basis: 17vw;
+    text-align: center;
+    border: 1px solid $plan-border-color;
+    &__title {
+        background-color: black;
+        padding: 40px 0;
+        &--header{
+            font-size: 12px;
+        }
+        &--price {
+            font-size: 30px;
+        }
+    }
+    &__description{
+        background-color: $plan-description-color;
+        padding: 40px 0;
+        p{
+            padding: 10px 0;
+        }
+        button {
+            margin-top: 50px;
+            padding: 5px 10px;
+            background-color: $orange-color;
+            border:none;
+            border-radius: 3px;
+            color: white;
+        }
+    }
+    &:hover {
+        border: 1px solid $orange-color;
+    }
+}
+
+@media screen and (max-width: $tablet-width){
+    .plan {
+        height: auto;
+        &__offers{
+            flex-wrap: wrap;
+        }
+    }
+    .offer {
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (max-width: $min-phone-width) {
+    .offer {
+        flex-basis: 80vw;
+    }
+}

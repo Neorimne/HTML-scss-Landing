@@ -1,0 +1,65 @@
+.creative {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, $black-color, $plan-block-color);
+    color: $grey-color;
+    &__title {
+        width: 100vw;
+        text-align: center;
+        margin: 40vh 0;
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 30px;
+            margin-top: 10px;
+        }
+    }
+    &__logo {
+        text-align: center;
+        margin: -15vh 0;
+        img,p {
+            margin:5px 0;
+        }
+    }
+}
+@media screen and (max-width: $tablet-width ) {
+    .creative{
+        &__title {
+            h1 {
+                font-size: 35px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        &__logo {
+            img {
+                display: none;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media screen and (max-width: $smartphone-width){
+    .creative{
+        &__title {
+            h1 {
+                font-size: 25px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+        &__logo {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
